@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Fraunces', 'Noto Serif Devanagari', 'Noto Serif Telugu', Georgia, Cambria, serif;
+    --font-sans: 'Plus Jakarta Sans', 'Noto Sans Devanagari', 'Noto Sans Telugu', system-ui, -apple-system, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Noto Sans Devanagari', 'Noto Sans Telugu', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #F7F5EF;
+    color: #20231F;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  h1, h2, .font-editorial {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Ensure complex Indic scripts (Hindi, Telugu) preserve conjuncts, ligatures, and diacritics */
+:lang(hi), :lang(te), [lang="hi"], [lang="te"],
+:lang(hi) *, :lang(te) *, [lang="hi"] *, [lang="te"] * {
+  letter-spacing: normal !important;
+  text-transform: none !important;
+}
+
+/* Custom focus ring styling for accessible keyboard navigation */
+:focus-visible {
+  outline: 2px solid #174C3C;
+  outline-offset: 2px;
+}
+
+/* Print styling for Incident Summary Dossier */
+@media print {
+  body {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}

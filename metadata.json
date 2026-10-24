@@ -1,0 +1,6 @@
+{
+  "name": "Suraksha Saathi",
+  "description": "Citizen-focused cyber fraud first response platform providing calm, immediate, step-by-step guidance to secure accounts, preserve evidence, and reach official reporting channels.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
